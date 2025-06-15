@@ -1,69 +1,100 @@
+An easy and effective Python tool to detect phishing URLs with rule-based heuristics and machine learning.
 
-Phishing Detection Tool
-Ever wondered if a URL you’re about to click is safe? This tool helps you figure that out! It uses simple rules and a machine-learning model to check if a URL is safe or potentially dangerous.
+Features
 
-What Does It Do?
-Rule-Based Checks: Quickly flags suspicious URLs with patterns like %, @, or http://.
+Rule-Based Detection: Easily marks URLs with suspicious patterns (e.g., those containing @, %, or http://).
 
-Machine Learning: Learns from a dataset to get smarter about detecting phishing.
+Machine Learning: Employs a Random Forest model trained on labeled URL datasets for sophisticated detection.
 
-Easy Interface: Just type in a URL and get an answer—safe or suspicious!
+Graphical User Interface (GUI): Enables users to simply enter URLs and determine their safety status.
 
-What You Need to Use This
-Python 3.8 or higher.
+Scalable Design: Accommodates dynamic datasets for improved adaptability and precision.
 
-A few Python libraries:
+Project Structure
+
+phishing_detection_tool.py: Main script with the code for the tool.
+
+url_dataset.csv: Dataset file (to be supplied) with labeled URLs.
+
+README.md: Project documentation (this file).
+
+Requirements
+
+Python 3.8 or later
+
+Libraries:
 
 pandas
 
 scikit-learn
+tkinter
 
-tkinter (this one is built into Python).
-
-To install the missing libraries, just run this in your terminal:
+Install dependencies with:
 
 bash
-Copy
-Edit
+
+CopyEdit
+
 pip install pandas scikit-learn
-How to Use It
-Download this project and open the folder.
 
-Make sure you’ve got a file called url_dataset.csv in the same folder.
+How to Use the Tool
 
-This file is like the brain of the tool—it teaches the model what’s safe and what’s not.
-
-Open a terminal or command prompt in the project folder and run:
+Clone the repository onto your local machine:
 
 bash
-Copy
-Edit
+
+CopyEdit
+
+git clone https://github.com/your-username/phishing-detection-tool.git cd phishing-detection-tool
+
+Make sure the dataset file url_dataset.csv is in the project directory.
+
+Run the script:
+
+bash
+
+CopyEdit
+
 python phishing_detection_tool.py
-A window will pop up.
 
-Type a URL into the box.
+Enter a URL in the GUI input field and click Check URL to view the outcome.
 
-Hit the Check URL button.
+Dataset Format
 
-Get your result: Safe or Suspicious.
+The utility takes a CSV file (url_dataset.csv) as input with the following format:
 
-What’s in the Dataset?
-The dataset (url_dataset.csv) is pretty simple:
+URL: The URL to check.
 
-URL: The website link.
+Label: 1 for suspicious and 0 for safe URLs.
 
-Label: 1 if it’s phishing, 0 if it’s safe.
+Example:
 
-Here’s an example of how it looks:
+URLLabelhttp://example.com0https://phishing-site.org1
 
-URL	Label
-http://example.com	0
-https://phishing-site.org	1
+Screenshots
 
-What Could Make This Better?
-Adding more rules to catch tricky phishing URLs.
+1. Input URL:
 
-Using a bigger dataset to make it even smarter.
+A straightforward input field to input the URL.
 
-Keeping a history of checked URLs for reference.
+2. Result Display:
 
+Displays whether the URL is safe or suspicious based on rule-based or machine learning detection.
+
+Future Improvements
+
+Utilize more complete datasets for increased accuracy.
+
+Implement API integrations to provide real-time URL analysis.
+
+Enhance rule-based validation to scan more phishing types.
+
+Integrate a logging function to store results for analysis.
+
+License
+
+Licensed under the MIT License. Use, modify, and distribute freely.
+
+Contributing
+
+Contributions are encouraged! Fork the repository, implement your changes, and open a pull request.
