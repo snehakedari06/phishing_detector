@@ -1,0 +1,6 @@
+URL,Label
+https://example.com,0
+http://malicious-site.com,1
+https://google.com,0
+http://phishingsite.com,1
+
