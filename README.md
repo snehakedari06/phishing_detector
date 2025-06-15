@@ -1,6 +1,9 @@
+
+PHISHING_DETECTOR
+
 An easy and effective Python tool to detect phishing URLs with rule-based heuristics and machine learning.
 
-Features
+FEATURES:
 
 Rule-Based Detection: Easily marks URLs with suspicious patterns (e.g., those containing @, %, or http://).
 
@@ -10,7 +13,7 @@ Graphical User Interface (GUI): Enables users to simply enter URLs and determine
 
 Scalable Design: Accommodates dynamic datasets for improved adaptability and precision.
 
-Project Structure
+PROJECT STRUCTURE:
 
 phishing_detection_tool.py: Main script with the code for the tool.
 
@@ -18,7 +21,7 @@ url_dataset.csv: Dataset file (to be supplied) with labeled URLs.
 
 README.md: Project documentation (this file).
 
-Requirements
+REQUIREMENTS:
 
 Python 3.8 or later
 
